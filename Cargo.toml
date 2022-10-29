@@ -1,0 +1,19 @@
+[package]
+name = "test-bytes"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+debug = true
+lto = "fat"
+codegen-units = 1
+target-cpu = "native"
+panic = "abort"
+
+[dependencies]
+futures = "0.3"
+tokio = {version="0.2", features=["full"]}
+bytes={version = "0.5.4", features = ["serde"]}
+bytestring={version = "0.1.5", features = ["serde"]}
