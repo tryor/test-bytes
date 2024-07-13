@@ -13,6 +13,7 @@ target-cpu = "native"
 panic = "abort"
 
 [dependencies]
+aws-lc-rs = "1.8"
 #futures = "0.3"
 #tokio = {version="0.2", features=["full"]}
 #bytes={version = "0.5.4", features = ["serde"]}
